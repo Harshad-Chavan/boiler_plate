@@ -1,12 +1,13 @@
 
 import os
+from decouple import config
 
 # print("1" + os.path.abspath(__file__))
 # print("2" +os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # print("3" +BASE_DIR)
 
-SECRET_KEY = 'f_6w3r!(qp1t_0cz)p6=qsngzp%4i#g-fu$6f&)8p%s*#tvkij'
+SECRET_KEY = config('SECRET_KEY')
 
 
 INSTALLED_APPS = [
